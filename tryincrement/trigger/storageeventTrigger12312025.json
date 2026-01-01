@@ -1,0 +1,24 @@
+{
+	"name": "storageeventTrigger12312025",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pipeline1",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/controldetails/blobs/",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/2284f265-8499-4a3e-b90d-c08b63de4eab/resourceGroups/jp_dev_rs_12292025/providers/Microsoft.Storage/storageAccounts/sadev122920151",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}

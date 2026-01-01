@@ -1,0 +1,29 @@
+{
+	"name": "AzureSqlDatabase2",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "sqladfincremntaldev.database.windows.net",
+			"database": "free-sql-db-8916189",
+			"encrypt": "optional",
+			"trustServerCertificate": false,
+			"authenticationType": "ServicePrincipal",
+			"servicePrincipalId": "6f889099-fa1a-4380-ab48-4f71793c8fc7",
+			"servicePrincipalCredential": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault4",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "kvspdevinside1"
+			},
+			"tenant": "778545f3-f1a9-44e8-8fde-869646960f67"
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntime2",
+			"type": "IntegrationRuntimeReference"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/linkedservices"
+}
