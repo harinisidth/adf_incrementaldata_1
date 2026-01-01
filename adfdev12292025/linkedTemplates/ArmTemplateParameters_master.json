@@ -1,0 +1,57 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adfdev12292025"
+		},
+		"AzureSqlDatabase1_servicePrincipalCredential": {
+			"value": ""
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://kv122920252.vault.azure.net/"
+		},
+		"AzureKeyVault2_properties_typeProperties_baseUrl": {
+			"value": "https://kv122920252.vault.azure.net/"
+		},
+		"AzureKeyVault3_properties_typeProperties_baseUrl": {
+			"value": "https://kv122920252.vault.azure.net/"
+		},
+		"AzureKeyVault4_properties_typeProperties_baseUrl": {
+			"value": "https://kvsp12312025.vault.azure.net/"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "sqladfincremntaldev.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "free-sql-db-8916189"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_servicePrincipalId": {
+			"value": "6f889099-fa1a-4380-ab48-4f71793c8fc7"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_tenant": {
+			"value": "778545f3-f1a9-44e8-8fde-869646960f67"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_server": {
+			"value": "sqladfincremntaldev.database.windows.net"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_database": {
+			"value": "free-sql-db-8916189"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_servicePrincipalId": {
+			"value": "6f889099-fa1a-4380-ab48-4f71793c8fc7"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_tenant": {
+			"value": "778545f3-f1a9-44e8-8fde-869646960f67"
+		},
+		"storageeventTrigger12312025_properties_typeProperties_scope": {
+			"value": "/subscriptions/2284f265-8499-4a3e-b90d-c08b63de4eab/resourceGroups/jp_dev_rs_12292025/providers/Microsoft.Storage/storageAccounts/sadev122920151"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}

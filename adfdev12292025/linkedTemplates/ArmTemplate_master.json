@@ -1,0 +1,140 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "adfdev12292025"
+		},
+		"AzureSqlDatabase1_servicePrincipalCredential": {
+			"type": "secureString",
+			"metadata": "Secure string for 'servicePrincipalCredential' of 'AzureSqlDatabase1'"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://kv122920252.vault.azure.net/"
+		},
+		"AzureKeyVault2_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://kv122920252.vault.azure.net/"
+		},
+		"AzureKeyVault3_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://kv122920252.vault.azure.net/"
+		},
+		"AzureKeyVault4_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://kvsp12312025.vault.azure.net/"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "sqladfincremntaldev.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "free-sql-db-8916189"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_servicePrincipalId": {
+			"type": "string",
+			"defaultValue": "6f889099-fa1a-4380-ab48-4f71793c8fc7"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_tenant": {
+			"type": "string",
+			"defaultValue": "778545f3-f1a9-44e8-8fde-869646960f67"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "sqladfincremntaldev.database.windows.net"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "free-sql-db-8916189"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_servicePrincipalId": {
+			"type": "string",
+			"defaultValue": "6f889099-fa1a-4380-ab48-4f71793c8fc7"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_tenant": {
+			"type": "string",
+			"defaultValue": "778545f3-f1a9-44e8-8fde-869646960f67"
+		},
+		"storageeventTrigger12312025_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/2284f265-8499-4a3e-b90d-c08b63de4eab/resourceGroups/jp_dev_rs_12292025/providers/Microsoft.Storage/storageAccounts/sadev122920151"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "adfdev12292025_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureSqlDatabase1_servicePrincipalCredential": {
+						"value": "[parameters('AzureSqlDatabase1_servicePrincipalCredential')]"
+					},
+					"AzureKeyVault1_properties_typeProperties_baseUrl": {
+						"value": "[parameters('AzureKeyVault1_properties_typeProperties_baseUrl')]"
+					},
+					"AzureKeyVault2_properties_typeProperties_baseUrl": {
+						"value": "[parameters('AzureKeyVault2_properties_typeProperties_baseUrl')]"
+					},
+					"AzureKeyVault3_properties_typeProperties_baseUrl": {
+						"value": "[parameters('AzureKeyVault3_properties_typeProperties_baseUrl')]"
+					},
+					"AzureKeyVault4_properties_typeProperties_baseUrl": {
+						"value": "[parameters('AzureKeyVault4_properties_typeProperties_baseUrl')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_server')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_database')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_servicePrincipalId": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_servicePrincipalId')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_tenant": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_tenant')]"
+					},
+					"AzureSqlDatabase2_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabase2_properties_typeProperties_server')]"
+					},
+					"AzureSqlDatabase2_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabase2_properties_typeProperties_database')]"
+					},
+					"AzureSqlDatabase2_properties_typeProperties_servicePrincipalId": {
+						"value": "[parameters('AzureSqlDatabase2_properties_typeProperties_servicePrincipalId')]"
+					},
+					"AzureSqlDatabase2_properties_typeProperties_tenant": {
+						"value": "[parameters('AzureSqlDatabase2_properties_typeProperties_tenant')]"
+					},
+					"storageeventTrigger12312025_properties_typeProperties_scope": {
+						"value": "[parameters('storageeventTrigger12312025_properties_typeProperties_scope')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
