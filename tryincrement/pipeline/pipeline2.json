@@ -52,6 +52,41 @@
 					},
 					"firstRowOnly": false
 				}
+			},
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "Lookup123120253",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "pipelineReturnValue",
+					"value": [
+						{
+							"key": "table_name",
+							"value": {
+								"type": "String"
+							}
+						},
+						{
+							"key": "last_processed_date",
+							"value": {
+								"type": "Int"
+							}
+						}
+					],
+					"setSystemVariable": true
+				}
 			}
 		],
 		"folder": {
