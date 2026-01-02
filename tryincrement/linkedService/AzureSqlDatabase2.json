@@ -21,7 +21,7 @@
 			"tenant": "778545f3-f1a9-44e8-8fde-869646960f67"
 		},
 		"connectVia": {
-			"referenceName": "integrationRuntime2",
+			"referenceName": "integrationRuntime1",
 			"type": "IntegrationRuntimeReference"
 		}
 	},
