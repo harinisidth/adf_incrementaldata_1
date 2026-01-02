@@ -56,7 +56,7 @@
 						{
 							"key": "last_processed_date",
 							"value": {
-								"type": "Int"
+								"type": "String"
 							}
 						}
 					],
