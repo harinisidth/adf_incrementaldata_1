@@ -1,0 +1,22 @@
+{
+	"name": "ls_asa1",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"serviceEndpoint": "https://sadev122920151.blob.core.windows.net/",
+			"tenant": "778545f3-f1a9-44e8-8fde-869646960f67",
+			"servicePrincipalId": "6f889099-fa1a-4380-ab48-4f71793c8fc7",
+			"servicePrincipalCredentialType": "ServicePrincipalKey",
+			"servicePrincipalCredential": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault4",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "kvspdevinside1"
+			},
+			"accountKind": "StorageV2"
+		}
+	}
+}
