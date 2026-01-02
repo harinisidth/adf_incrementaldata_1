@@ -171,7 +171,7 @@
 								{
 									"key": "last_processed_date",
 									"value": {
-										"type": "Int"
+										"type": "String"
 									}
 								}
 							],
@@ -355,12 +355,12 @@
 					"tenant": "[parameters('AzureSqlDatabase2_properties_typeProperties_tenant')]"
 				},
 				"connectVia": {
-					"referenceName": "integrationRuntime2",
+					"referenceName": "integrationRuntime1",
 					"type": "IntegrationRuntimeReference"
 				}
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/integrationRuntimes/integrationRuntime2')]",
+				"[concat(variables('factoryId'), '/integrationRuntimes/integrationRuntime1')]",
 				"[concat(variables('factoryId'), '/linkedServices/AzureKeyVault4')]"
 			]
 		},
@@ -370,7 +370,7 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"annotations": [],
-				"runtimeState": "Stopped",
+				"runtimeState": "Started",
 				"pipelines": [
 					{
 						"pipelineReference": {
